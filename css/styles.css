@@ -1,0 +1,118 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100vh;
+  padding: 0px;
+  margin: 0px;
+  /* display: flex; */
+  /* flex-direction: row; */
+}
+main {
+  display: grid;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  transition: 2s;
+  padding: 40px 50px;
+  background-color: black;
+  /* background-color: #ededed; */
+  /* text-align: right; */
+  font-size: 20px;
+  /* padding-right: 20px; */
+  /* border-bottom: 0.5px solid black; */
+}
+.banner {
+  background-color: black;
+  /* width: 100px; */
+  height: 130px;
+}
+
+nav .logo {
+  align-self: left;
+  position: relative;
+  font-weight: 700px;
+  color: white;
+  text-decoration: none;
+  font-size: 2em;
+  text-transform: uppercase;
+}
+
+nav ul {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul li {
+  position: relative;
+  list-style: none;
+}
+
+nav ul li a {
+  /* position: relative; */
+  margin: 0 15px;
+  text-decoration: none;
+  color: white;
+  letter-spacing: 2px;
+  font-weight: 500px;
+  /* transition: 0.5s; */
+}
+
+nav ul li a:hover {
+  color: skyblue;
+}
+
+/* #headline { */
+/* font-size: 100px; */
+/* color: #ededed; */
+/* background-color: #191919; */
+/* padding: 20px 10px 20px 10px; */
+/* text-align: center; */
+/* } */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  font-size: 30px;
+  padding: 0px 10px 10px 10px;
+  height: 100vh;
+  text-align: center;
+  justify-content: center;
+  font-size: 3rem;
+  background: url("//unsplash.it/1650/1080") center center/cover;
+}
+
+.container h1 {
+  font-size: 4rem;
+}
+
+.container #sect1 {
+  background-color: #22577e;
+  /* border: solid green; */
+}
+
+#sect2 {
+  background-color: #5584ac;
+}
+
+#sect3 {
+  background-color: #b1d0e0;
+}
+
+#sect4 {
+  background-color: #f6f2d4;
+}
