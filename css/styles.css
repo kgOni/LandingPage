@@ -6,9 +6,9 @@
 
 body,
 html {
-  height: 100vh;
-  padding: 0px;
-  margin: 0px;
+  /* height: 100vh; */
+  /* padding: 0px; */
+  /* margin: 0px; */
   /* display: flex; */
   /* flex-direction: row; */
 }
@@ -25,29 +25,53 @@ nav {
   display: flex;
   justify-content: space-between;
   align-content: center;
-  transition: 2s;
-  padding: 40px 50px;
+  /* transition: 2s; */
+  padding: 20px 20px 20px 15px;
   background-color: black;
-  /* background-color: #ededed; */
-  /* text-align: right; */
+  text-align: right;
   font-size: 20px;
-  /* padding-right: 20px; */
-  /* border-bottom: 0.5px solid black; */
+  padding-right: 20px;
+  border-bottom: 0.5px solid black;
 }
 .banner {
+  height: 60px;
+}
+
+.navbar #button {
+  font-size: 20px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: white;
   background-color: black;
-  /* width: 100px; */
-  height: 130px;
+  border: none;
+  padding: 0px;
+}
+
+.navbar #button:hover {
+  color: skyblue;
+}
+
+.navbar .active {
+  color: lightblue;
+}
+
+.headline {
+  display: flex;
+  height: 50vh;
+  font-size: 160px;
+  padding-bottom: 10px;
+  align-items: center;
+  justify-content: center;
+  background: url("//unsplash.it/1000/400") center center/cover;
 }
 
 nav .logo {
-  align-self: left;
-  position: relative;
-  font-weight: 700px;
-  color: white;
-  text-decoration: none;
-  font-size: 2em;
-  text-transform: uppercase;
+  /* align-self: left; */
+  /* position: relative; */
+  /* font-weight: 700px; */
+  /* color: white; */
+  /* text-decoration: none; */
+  /* font-size: 2em; */
+  /* text-transform: uppercase; */
 }
 
 nav ul {
@@ -76,27 +100,21 @@ nav ul li a:hover {
   color: skyblue;
 }
 
-/* #headline { */
-/* font-size: 100px; */
-/* color: #ededed; */
-/* background-color: #191919; */
-/* padding: 20px 10px 20px 10px; */
-/* text-align: center; */
-/* } */
-
 .container {
   display: flex;
   flex-direction: column;
-  font-size: 30px;
+  font-size: 10px;
   padding: 0px 10px 10px 10px;
   height: 100vh;
   text-align: center;
   justify-content: center;
-  font-size: 3rem;
+  font-size: 2rem;
+  /* background: url(//unsplash.it/1000/1000); */
+  /* background-color: green; */
   background: url("//unsplash.it/1650/1080") center center/cover;
 }
 
-.container h1 {
+.container h2 {
   font-size: 4rem;
 }
 
