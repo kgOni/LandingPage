@@ -1,6 +1,7 @@
 // creating and counting all the section
-let el = 0;
+let el = "";
 const createSection = () => {
+  //define the function for creating the new content and the new sections
   el++;
   const content = `<section id="section${el}" data-nav="Section ${el}">
     <div class="container">
@@ -31,7 +32,7 @@ const createNavBarItems = () => {
   });
 };
 
-// call the functions to create 
+// call the functions to create 4 section on first load
 for (let i = 0; i < 4; i++) createSection();
 createNavBarItems();
 
@@ -41,15 +42,19 @@ document.getElementById("button").addEventListener("click", () => {
   createNavBarItems();
 });
 
+//on click you scroll to the section you chose
 navbar.addEventListener("click", (event) => {
+  //clicked element form the navbar starts the event
   event.preventDefault();
   if (event.target.dataset.nav) {
     document
       .getElementById(event.target.dataset.nav)
-      .scrollIntoView({ behavior: "smooth" });
+      .scrollIntoView({ behavior: "smooth" }); //define to scroll smooth to the section
   }
 });
 
+//Viewport: When the Section/ class is in the viewport the class active will be added and removed
+//activelink will be activate, too. with these you can change the color for the navbar
 window.onscroll = function () {
   document.querySelectorAll("section").forEach(function (active) {
     let activeLink = navbar.querySelector(`[data-nav=${active.id}]`);
