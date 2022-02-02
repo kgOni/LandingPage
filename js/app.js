@@ -21,7 +21,8 @@ const createSection = () => {
   document.querySelector("main").insertAdjacentHTML("beforeend", content); //print them in the html page
 };
 
-const navbar = document.getElementById("navbarlist");
+//creat the NavBar with the section on the page
+const navbar = document.getElementById("navbarlist"); //get all the Elements insight navbarlist
 const createNavBarItems = () => {
   navbar.innerHTML = "";
   document.querySelectorAll("section").forEach((section) => {
@@ -30,6 +31,7 @@ const createNavBarItems = () => {
   });
 };
 
+// call the functions to create 
 for (let i = 0; i < 4; i++) createSection();
 createNavBarItems();
 
