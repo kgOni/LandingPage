@@ -1,5 +1,5 @@
 # Hi there, I'm Kevin
-## Project Title: __LandingPage__
+## Project Title: _LandingPage_
 ### Description: 
 Then plan is to build a new landing page. 
 More then __4 section__ and any section should be shown on the __NavBar__. 
