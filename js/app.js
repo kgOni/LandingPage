@@ -1,10 +1,10 @@
 // creating and counting all the section
-let counter = 0;
+let el = 0;
 const createSection = () => {
-  counter++;
-  const content = `<section id="section${counter}" data-nav="Section ${counter}">
+  el++;
+  const content = `<section id="section${el}" data-nav="Section ${el}">
     <div class="container">
-    <h2>Section ${counter}</h2>
+    <h2>Section ${el}</h2>
     <div id="message">
     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda
     reprehenderit eos consectetur earum neque dolor necessitatibus
@@ -21,45 +21,42 @@ const createSection = () => {
   document.querySelector("main").insertAdjacentHTML("beforeend", content); //print them in the html page
 };
 
-const navBar = document.getElementById("listnavbar");
-const createNavItems = () => {
-  navBar.innerHTML = "";
+const navbar = document.getElementById("navbarlist");
+const createNavBarItems = () => {
+  navbar.innerHTML = "";
   document.querySelectorAll("section").forEach((section) => {
     const navbaritems = `<li><a href="#${section.id}" data-nav="${section.id}" class="menulink">${section.dataset.nav}</a></li>`;
-    navBar.insertAdjacentHTML("beforeend", navbaritems);
+    navbar.insertAdjacentHTML("beforeend", navbaritems);
   });
 };
 
-//
-for (let i = 1; i < 5; i++) createSection();
-createNavItems();
+for (let i = 0; i < 4; i++) createSection();
+createNavBarItems();
 
+//creat new Section and new NavBarItems
 document.getElementById("button").addEventListener("click", () => {
   createSection();
-  createNavItems();
+  createNavBarItems();
 });
 
-navBar.addEventListener("click", (event) => {
+navbar.addEventListener("click", (event) => {
   event.preventDefault();
   if (event.target.dataset.nav) {
     document
-      .getElementById(`${event.target.dataset.nav}`)
+      .getElementById(event.target.dataset.nav)
       .scrollIntoView({ behavior: "smooth" });
-    setTimeout(() => {
-      location.hash = `${event.target.dataset.nav}`;
-    }, 200);
   }
 });
 
 window.onscroll = function () {
   document.querySelectorAll("section").forEach(function (active) {
-    let activeLink = navBar.querySelector(`[data-nav=${active.id}]`);
+    let activeLink = navbar.querySelector(`[data-nav=${active.id}]`);
     if (
       active.getBoundingClientRect().top >= -400 &&
       active.getBoundingClientRect().top <= 150
     ) {
       active.classList.add("active");
-      activeLink.classList.add("active-");
+      activeLink.classList.add("active");
     } else {
       active.classList.remove("active");
       activeLink.classList.remove("active");
