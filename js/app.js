@@ -54,13 +54,13 @@ navbar.addEventListener("click", (event) => {
 });
 
 //Viewport: When the Section/ class is in the viewport the class active will be added and removed
-//activelink will be activate, too. with these you can change the color for the navbar
+//activelink will be activate, too. whne the section is in the viewport you can change for example the color of the navbar icon
 window.onscroll = function () {
   document.querySelectorAll("section").forEach(function (active) {
     let activeLink = navbar.querySelector(`[data-nav=${active.id}]`);
     if (
-      active.getBoundingClientRect().top >= -400 &&
-      active.getBoundingClientRect().top <= 150
+      active.getBoundingClientRect().top >= -600 &&
+      active.getBoundingClientRect().top <= 50
     ) {
       active.classList.add("active");
       activeLink.classList.add("active");
